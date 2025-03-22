@@ -11,6 +11,19 @@ i18n
                         vi: 'Vietnamese',
                         en: 'English',
                     },
+                    text: {
+                        signIn: 'Sign in',
+                        email: 'Email address',
+                        password: 'Password',
+                        forgotPassword: 'Forgot password?',
+                        getStarted: 'Get started',
+                        dontHaveAccount: 'Don\'t have an account?',
+                        or: 'Or',
+                        error: 'An error has occurred'
+                    },
+                    button: {
+                        signIn: 'Sign in',
+                    }
                 },
             },
             vi: {
@@ -19,6 +32,19 @@ i18n
                         vi: 'Tiếng Việt',
                         en: 'English',
                     },
+                    text: {
+                        signIn: 'Đăng nhập',
+                        email: 'Địa chỉ email',
+                        password: 'Mật khẩu',
+                        forgotPassword: 'Quên mật khẩu?',
+                        getStarted: 'Tạo tài khoản',
+                        dontHaveAccount: 'Chưa có tài khoản?',
+                        or: 'Hoặc',
+                        error: 'Đã có lỗi xảy ra'
+                    },
+                    button: {
+                        signIn: 'Đăng nhập',
+                    }
                 },
             },
         },
