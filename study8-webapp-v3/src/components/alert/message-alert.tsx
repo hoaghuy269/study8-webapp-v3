@@ -18,7 +18,7 @@ export default function MessageAlert({ open, message, severity = 'error', onClos
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         >
             <Alert severity={severity} onClose={onClose}>
-                <AlertTitle>{t(`text.${severity}`)}</AlertTitle>
+                <AlertTitle>{t(`alert.${severity}`)}</AlertTitle>
                 {message}
             </Alert>
         </Snackbar>

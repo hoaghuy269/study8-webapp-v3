@@ -15,12 +15,12 @@ import { useRouter } from 'src/routes/hooks';
 
 import { Iconify } from 'src/components/iconify';
 
-import { signIn } from './sign-in-service';
-import MessageAlert from '../../components/alert/message-alert';
+import apiService from '../../services/api-service';
+import MessageAlert from "../../components/alert/message-alert";
 
 // ----------------------------------------------------------------------
 
-export function SignInView() {
+export function RegisterView() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -40,12 +40,17 @@ export function SignInView() {
   const handleSignIn = async (data: FormData) => {
     try {
       setLoading(true);
-      const result = await signIn(data.email, data.password);
+      const response = await apiService.post('/auth/login', {
+        username: data.email,
+        password: data.password,
+      });
 
-      localStorage.setItem('token', result.token);
-      router.push('/');
-    } catch (error) {
-      setErrorMessage(t(error));
+      if (response.data.statusCode === 200) {
+        localStorage.setItem('token', response.data.data.token);
+        router.push('/');
+      }
+    } catch (error: any) {
+      setErrorMessage(error.response?.data?.message || 'Đăng nhập thất bại');
       setOpenAlert(true);
     } finally {
       setLoading(false);
@@ -60,7 +65,7 @@ export function SignInView() {
         <Typography variant="h5">{t('text.signIn')}</Typography>
         <Typography variant="body2" color="text.secondary">
           {t('text.dontHaveAccount')}
-          <Link variant="subtitle2" sx={{ ml: 0.5 }}  onClick={() => router.push('/register')}>
+          <Link variant="subtitle2" sx={{ ml: 0.5 }}>
             {t('text.getStarted')}
           </Link>
         </Typography>
@@ -73,17 +78,12 @@ export function SignInView() {
             label={t('text.email')}
             placeholder="mail@email.com"
             InputLabelProps={{ shrink: true }}
-            {...register('email', {
-              required: t('error.emailRequired'),
-              pattern: {
-                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                message: t('error.emailInvalid'),
-              },
-            })}
+            {...register('email', { required: t('error.emailRequired') })}
             error={!!errors.email}
             helperText={errors.email?.message as string}
             sx={{ mb: 3 }}
           />
+
           <Link variant="body2" color="inherit" sx={{ mb: 1.5 }}>
             {t('text.forgotPassword')}
           </Link>

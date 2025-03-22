@@ -11,13 +11,22 @@
     "getStarted": "Tạo tài khoản",
     "dontHaveAccount": "Chưa có tài khoản?",
     "or": "Hoặc",
-    "error": "Đã có lỗi xảy ra"
+    "error": "Đã có lỗi xảy ra",
+    "register": "Đăng ký"
   },
   "button": {
     "signIn": "Đăng nhập"
   },
   "error": {
     "emailRequired": "Email không được để trống",
-    "passwordRequired": "Mật khẩu không được để trống"
+    "passwordRequired": "Mật khẩu không được để trống",
+    "serverError": "Lỗi kết nối máy chủ",
+    "emailInvalid": "Email không đúng định dạng"
+  },
+  "alert": {
+    "success": "Thành công",
+    "error": "Lỗi",
+    "warning": "Cảnh báo",
+    "info": "Lưu ý"
   }
 }

@@ -11,13 +11,22 @@
     "getStarted": "Get started",
     "dontHaveAccount": "Don't have an account?",
     "or": "Or",
-    "error": "An error has occurred"
+    "error": "An error has occurred",
+    "register": "Register"
   },
   "button": {
     "signIn": "Sign in"
   },
   "error": {
     "emailRequired": "Email is required",
-    "passwordRequired": "Password is required"
+    "passwordRequired": "Password is required",
+    "serverError": "Server error",
+    "emailInValid": "Email is invalid"
+  },
+  "alert": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info"
   }
 }
