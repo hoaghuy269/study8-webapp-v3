@@ -16,7 +16,7 @@ import { useRouter } from 'src/routes/hooks';
 import { Iconify } from 'src/components/iconify';
 
 import apiService from '../../services/api-service';
-import ErrorAlert from "../../components/alert/message-alert";
+import MessageAlert from "../../components/alert/message-alert";
 
 // ----------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ export function SignInView() {
 
   return (
     <>
-      <ErrorAlert open={openAlert} message={errorMessage} onClose={() => setOpenAlert(false)} />
+      <MessageAlert open={openAlert} message={errorMessage} onClose={() => setOpenAlert(false)} />
 
       <Box gap={1.5} display="flex" flexDirection="column" alignItems="center" sx={{ mb: 5 }}>
         <Typography variant="h5">{t('text.signIn')}</Typography>

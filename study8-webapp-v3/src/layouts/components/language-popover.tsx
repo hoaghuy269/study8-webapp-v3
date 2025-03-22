@@ -39,6 +39,7 @@ export function LanguagePopover({ data = [], sx, ...other }: LanguagePopoverProp
       i18n
         .changeLanguage(newLang)
         .then(() => {
+          localStorage.setItem('language', newLang);
           setLocale(newLang);
           handleClosePopover();
         })

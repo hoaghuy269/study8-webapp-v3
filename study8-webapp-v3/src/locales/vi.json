@@ -1,0 +1,23 @@
+{
+  "lang": {
+    "vi": "Tiếng Việt",
+    "en": "English"
+  },
+  "text": {
+    "signIn": "Đăng nhập",
+    "email": "Địa chỉ email",
+    "password": "Mật khẩu",
+    "forgotPassword": "Quên mật khẩu?",
+    "getStarted": "Tạo tài khoản",
+    "dontHaveAccount": "Chưa có tài khoản?",
+    "or": "Hoặc",
+    "error": "Đã có lỗi xảy ra"
+  },
+  "button": {
+    "signIn": "Đăng nhập"
+  },
+  "error": {
+    "emailRequired": "Email không được để trống",
+    "passwordRequired": "Mật khẩu không được để trống"
+  }
+}

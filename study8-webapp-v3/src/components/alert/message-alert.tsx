@@ -1,13 +1,15 @@
-import { Snackbar, Alert, AlertTitle } from '@mui/material';
 import { t } from 'i18next';
 
-interface ErrorAlertProps {
+import { Alert, Snackbar, AlertTitle } from '@mui/material';
+
+interface AlertProps {
     open: boolean;
     message: string | null;
+    severity?: 'success' | 'info' | 'warning' | 'error';
     onClose: () => void;
 }
 
-export default function ErrorAlert({ open, message, onClose }: ErrorAlertProps) {
+export default function MessageAlert({ open, message, severity = 'error', onClose }: AlertProps) {
     return (
         <Snackbar
             open={open}
@@ -15,8 +17,8 @@ export default function ErrorAlert({ open, message, onClose }: ErrorAlertProps) 
             onClose={onClose}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         >
-            <Alert severity="error" onClose={onClose}>
-                <AlertTitle>{t('text.error')}</AlertTitle>
+            <Alert severity={severity} onClose={onClose}>
+                <AlertTitle>{t(`text.${severity}`)}</AlertTitle>
                 {message}
             </Alert>
         </Snackbar>
