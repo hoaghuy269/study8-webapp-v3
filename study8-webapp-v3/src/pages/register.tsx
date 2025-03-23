@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 
 import { CONFIG } from 'src/config-global';
 
-import { RegisterView } from '../sections/auth/register-view';
+import { RegisterView } from '../sections/auth/register/view';
 
 // ----------------------------------------------------------------------
 

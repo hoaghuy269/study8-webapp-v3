@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { CONFIG } from 'src/config-global';
 
-import { SignInView } from 'src/sections/auth';
+import {SignInView} from "../sections/auth/sign-in/view";
 
 // ----------------------------------------------------------------------
 

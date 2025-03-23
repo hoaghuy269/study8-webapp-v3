@@ -2,7 +2,7 @@ import axios from 'axios';
 import {t} from "i18next";
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:8089/api/v1', // Base URL của API
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
         'Content-Type': 'application/json',
     },

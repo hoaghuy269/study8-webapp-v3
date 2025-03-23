@@ -12,21 +12,43 @@
     "dontHaveAccount": "Don't have an account?",
     "or": "Or",
     "error": "An error has occurred",
-    "register": "Register"
+    "register": "Register",
+    "createAnAccount": "Create an account",
+    "alreadyHaveAccount": "Already have an account?",
+    "notReceiveCode": "Didn't receive the verification code?",
+    "name": "Name",
+    "retypePassword": "Retype password",
+    "role": "You are?",
+    "roleSelect": "Select role",
+    "registerSuccess": "Register successfully",
+    "registerSuccessMessage": "Congratulations, your account has been successfully created."
   },
   "button": {
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "register": "Create an account",
+    "resend": "Resend",
+    "resendIn": "Resend in",
+    "submit": "Submit",
+    "goToLogin": "Go to login"
   },
   "error": {
     "emailRequired": "Email is required",
     "passwordRequired": "Password is required",
     "serverError": "Server error",
-    "emailInValid": "Email is invalid"
+    "emailInValid": "Email is invalid",
+    "nameNotEmpty": "Name is required",
+    "roleRequired": "Role is required",
+    "retypePasswordRequired": "Retype password is required",
+    "retypePasswordNotMatch": "Retype password not match",
+    "passwordInvalid": "Password is invalid"
   },
   "alert": {
     "success": "Success",
     "error": "Error",
     "warning": "Warning",
     "info": "Info"
+  },
+  "tooltip": {
+    "password": "Password must be at least 10 characters long, contain at least one uppercase letter, one lowercase letter, one special character, and have no spaces."
   }
 }

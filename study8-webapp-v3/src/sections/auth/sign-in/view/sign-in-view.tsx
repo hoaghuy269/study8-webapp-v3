@@ -15,17 +15,17 @@ import { useRouter } from 'src/routes/hooks';
 
 import { Iconify } from 'src/components/iconify';
 
-import { signIn } from './sign-in-service';
-import MessageAlert from '../../components/alert/message-alert';
+import { signIn } from '../service';
+import {useToast} from "../../../../hooks/use-toast";
+import {TOAST_SEVERITY} from "../../../../providers/toast-provider";
 
 // ----------------------------------------------------------------------
 
 export function SignInView() {
+  const toast = useToast();
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [openAlert, setOpenAlert] = useState(false);
   const {
     register,
     handleSubmit,
@@ -45,8 +45,7 @@ export function SignInView() {
       localStorage.setItem('token', result.token);
       router.push('/');
     } catch (error) {
-      setErrorMessage(t(error));
-      setOpenAlert(true);
+      toast?.addToast(error, TOAST_SEVERITY.ERROR);
     } finally {
       setLoading(false);
     }
@@ -54,13 +53,11 @@ export function SignInView() {
 
   return (
     <>
-      <MessageAlert open={openAlert} message={errorMessage} onClose={() => setOpenAlert(false)} />
-
       <Box gap={1.5} display="flex" flexDirection="column" alignItems="center" sx={{ mb: 5 }}>
         <Typography variant="h5">{t('text.signIn')}</Typography>
         <Typography variant="body2" color="text.secondary">
           {t('text.dontHaveAccount')}
-          <Link variant="subtitle2" sx={{ ml: 0.5 }}  onClick={() => router.push('/register')}>
+          <Link variant="subtitle2" sx={{ ml: 0.5, cursor: 'pointer' }}  onClick={() => router.push('/register')}>
             {t('text.getStarted')}
           </Link>
         </Typography>
@@ -77,7 +74,7 @@ export function SignInView() {
               required: t('error.emailRequired'),
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                message: t('error.emailInvalid'),
+                message: t('error.emailInValid'),
               },
             })}
             error={!!errors.email}
