@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
+import {useRouter} from "../../../../routes/hooks";
 import RegisterFirstForm from '../form/register-first-form';
 import RegisterThirdForm from "../form/register-third-form";
 import RegisterSecondForm from '../form/register-second-form';
@@ -13,11 +14,11 @@ import RegisterSuccessForm from "../form/register-success-form";
 // ----------------------------------------------------------------------
 
 export function RegisterView() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
   const [id, setId] = useState(null);
 
   const nextStep = () => setCurrentStep((prev) => prev + 1);
-  const prevStep = () => setCurrentStep((prev) => prev - 1);
 
   return (
     <>
@@ -25,7 +26,7 @@ export function RegisterView() {
         <Typography variant="h5">{t('text.createAnAccount')}</Typography>
         <Typography variant="body2" color="text.secondary">
           {t('text.alreadyHaveAccount')}
-          <Link variant="subtitle2" sx={{ ml: 0.5 }}>
+          <Link variant="subtitle2" onClick={() => router.push('/sign-in')} sx={{ ml: 0.5, cursor: 'pointer' }}>
             {t('text.signIn')}
           </Link>
         </Typography>

@@ -35,7 +35,7 @@ const RegisterSuccessForm = () => {
         variant="contained"
         color="primary"
         sx={{ mt: 3 }}
-        onClick={() => router.push('/login')}
+        onClick={() => router.push('/sign-in')}
       >
         {t('button.goToLogin')}
       </Button>
