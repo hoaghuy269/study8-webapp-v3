@@ -21,7 +21,9 @@
     "role": "You are?",
     "roleSelect": "Select role",
     "registerSuccess": "Register successfully",
-    "registerSuccessMessage": "Congratulations, your account has been successfully created."
+    "registerSuccessMessage": "Congratulations, your account has been successfully created.",
+    "class" : "Class",
+    "dashboard": "Dashboard"
   },
   "button": {
     "signIn": "Sign in",
@@ -29,7 +31,8 @@
     "resend": "Resend",
     "resendIn": "Resend in",
     "submit": "Submit",
-    "goToLogin": "Go to login"
+    "goToLogin": "Go to login",
+    "createClass": "Create class"
   },
   "error": {
     "emailRequired": "Email is required",

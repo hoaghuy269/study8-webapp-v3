@@ -21,7 +21,9 @@
     "role": "Bạn là?",
     "roleSelect": "Chọn vai trò",
     "registerSuccess": "Đăng ký thành công",
-    "registerSuccessMessage": "Chúc mừng, tài khoản của bạn đã được tạo thành công."
+    "registerSuccessMessage": "Chúc mừng, tài khoản của bạn đã được tạo thành công.",
+    "class": "Lớp học",
+    "dashboard": "Màn hình chính"
   },
   "button": {
     "signIn": "Đăng nhập",
@@ -29,7 +31,8 @@
     "resend": "Gửi lại",
     "resendIn": "Gửi lại trong",
     "submit": "Xác nhận",
-    "goToLogin": "Đăng nhập ngay"
+    "goToLogin": "Đăng nhập ngay",
+    "createClass": "Tạo lớp học"
   },
   "error": {
     "emailRequired": "Email không được để trống",
