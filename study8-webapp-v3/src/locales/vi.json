@@ -23,7 +23,11 @@
     "registerSuccess": "Đăng ký thành công",
     "registerSuccessMessage": "Chúc mừng, tài khoản của bạn đã được tạo thành công.",
     "class": "Lớp học",
-    "dashboard": "Màn hình chính"
+    "dashboard": "Màn hình chính",
+    "createNewClass": "Tạo lớp học mới",
+    "startClass": "Bắt đầu tạo mới lớp học để quản lý toàn bộ học sinh của bạn.",
+    "className": "Tên lớp học (bắt buộc)",
+    "description": "Mô tả"
   },
   "button": {
     "signIn": "Đăng nhập",
@@ -32,7 +36,8 @@
     "resendIn": "Gửi lại trong",
     "submit": "Xác nhận",
     "goToLogin": "Đăng nhập ngay",
-    "createClass": "Tạo lớp học"
+    "createClass": "Tạo lớp học",
+    "cancel": "Hủy"
   },
   "error": {
     "emailRequired": "Email không được để trống",

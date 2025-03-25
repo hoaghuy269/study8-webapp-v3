@@ -23,7 +23,11 @@
     "registerSuccess": "Register successfully",
     "registerSuccessMessage": "Congratulations, your account has been successfully created.",
     "class" : "Class",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "createNewClass": "Create new class",
+    "startClass": "Start creating a new class to manage all your students.",
+    "className": "Class name (required)",
+    "description": "Description"
   },
   "button": {
     "signIn": "Sign in",
@@ -32,7 +36,8 @@
     "resendIn": "Resend in",
     "submit": "Submit",
     "goToLogin": "Go to login",
-    "createClass": "Create class"
+    "createClass": "Create class",
+    "cancel": "Cancel"
   },
   "error": {
     "emailRequired": "Email is required",
