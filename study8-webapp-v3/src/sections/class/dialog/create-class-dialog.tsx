@@ -10,8 +10,6 @@ import {
   DialogContent,
   DialogContentText,
 } from '@mui/material';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 
 interface CreateClassDialogProps {
   open: boolean;
