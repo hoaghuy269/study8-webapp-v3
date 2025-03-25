@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -15,16 +15,26 @@ import { Iconify } from 'src/components/iconify';
 import { PostItem } from '../component/post-item';
 import { PostSort } from '../component/post-sort';
 import { PostSearch } from '../component/post-search';
+import { CreateClassDialog } from '../dialog/create-class-dialog';
 
 // ----------------------------------------------------------------------
 
 export function ClassView() {
   const [sortBy, setSortBy] = useState('latest');
+  const [openDialog, setOpenDialog] = useState(false);
   const { t } = useTranslation();
 
   const handleSort = useCallback((newSort: string) => {
     setSortBy(newSort);
   }, []);
+
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
+
+  const handleClose = () => {
+    setOpenDialog(false);
+  };
 
   return (
     <DashboardContent>
@@ -33,6 +43,7 @@ export function ClassView() {
           {t('text.class')}
         </Typography>
         <Button
+          onClick={handleClickOpen}
           variant="contained"
           color="inherit"
           startIcon={<Iconify icon="mingcute:add-line" />}
@@ -57,12 +68,14 @@ export function ClassView() {
       <Grid container spacing={3}>
         {_posts.map((post) => (
           <Grid key={post.id} xs={12} sm={6} md={3}>
-            <PostItem post={post}  latestPost={false} latestPostLarge={false}/>
+            <PostItem post={post} latestPost={false} latestPostLarge={false} />
           </Grid>
         ))}
       </Grid>
 
       <Pagination count={10} color="primary" sx={{ mt: 8, mx: 'auto' }} />
+
+      <CreateClassDialog open={openDialog} handleClose={handleClose} />
     </DashboardContent>
   );
 }
