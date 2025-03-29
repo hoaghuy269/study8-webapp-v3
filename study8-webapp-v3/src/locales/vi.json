@@ -27,7 +27,10 @@
     "createNewClass": "Tạo lớp học mới",
     "startClass": "Bắt đầu tạo mới lớp học để quản lý toàn bộ học sinh của bạn.",
     "className": "Tên lớp học (bắt buộc)",
-    "description": "Mô tả"
+    "description": "Mô tả",
+    "topic": "Chủ đề",
+    "document": "Tài liệu",
+    "student": "Học sinh"
   },
   "button": {
     "signIn": "Đăng nhập",

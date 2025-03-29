@@ -11,6 +11,8 @@ import {
   DialogContentText,
 } from '@mui/material';
 
+import { useRouter } from '../../../routes/hooks';
+
 interface CreateClassDialogProps {
   open: boolean;
   handleClose: () => void;
@@ -18,6 +20,7 @@ interface CreateClassDialogProps {
 
 export const CreateClassDialog: React.FC<CreateClassDialogProps> = ({ open, handleClose }) => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <Dialog open={open} onClose={handleClose}>
@@ -47,7 +50,9 @@ export const CreateClassDialog: React.FC<CreateClassDialogProps> = ({ open, hand
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>{t('button.cancel')}</Button>
-        <Button type="submit">{t('button.submit')}</Button>
+        <Button type="submit" onClick={() => router.push('/class/detail')}>
+          {t('button.submit')}
+        </Button>
       </DialogActions>
     </Dialog>
   );

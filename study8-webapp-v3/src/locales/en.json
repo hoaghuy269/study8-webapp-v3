@@ -27,7 +27,10 @@
     "createNewClass": "Create new class",
     "startClass": "Start creating a new class to manage all your students.",
     "className": "Class name (required)",
-    "description": "Description"
+    "description": "Description",
+    "topic": "Topic",
+    "document": "Document",
+    "student": "Student"
   },
   "button": {
     "signIn": "Sign in",
